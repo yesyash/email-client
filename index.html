@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Fluentmail</title>
+	<link rel="stylesheet" href="/src/styles/globals.css">
+</head>
+
+<body>
+	<div id="app">
+		<aside class="sidelinks">
+			<button class="sidelinks__link">
+				<div class="sidelinks__link__icon">
+					<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+						stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+						<polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+						<path
+							d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z">
+						</path>
+					</svg>
+				</div>
+			</button>
+
+			<button class="sidelinks__link">
+				<div class="sidelinks__link__icon">
+					<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+						stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+						<polyline points="3 6 5 6 21 6"></polyline>
+						<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+					</svg>
+				</div>
+			</button>
+
+			<button class="sidelinks__link">
+				<div class="sidelinks__link__icon">
+					<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+						stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+						<line x1="22" y1="2" x2="11" y2="13"></line>
+						<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+					</svg>
+				</div>
+			</button>
+		</aside>
+
+		<main class="main">
+			<div class="listbox">
+				<h1 class="listbox__heading">Inbox</h1>
+
+				<div class="searchbar">
+					<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
+						stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+						<circle cx="11" cy="11" r="8"></circle>
+						<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+					</svg>
+					<input type="text" class="searchbar__input" placeholder="Search...">
+				</div>
+
+				<div class="email-container">
+					<div class="email-card">
+						<div class="email-card__img">
+							<!-- <img src=""> -->
+							<div class="email-card__img__alt">
+								ru
+							</div>
+						</div>
+
+						<div class="email-card__content">
+							<span class="email-card__content__sender">Rahul Upadhya</span>
+							<h3 class="email-card__content__subject">Jumping mind test link</h3>
+							<p class="email-card__content__short-desc">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, recusandae!
+							</p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
