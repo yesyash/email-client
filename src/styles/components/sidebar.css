@@ -13,21 +13,9 @@
 }
 
 .sidelinks__link__icon {
-    border-radius: 0.5rem;
     padding: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: var(--transition-ease);
 }
 
-.sidelinks__link__icon:hover {
-    background: var(--neutral-800);
-}
-
-.sidelinks__link__icon:active {
-    background: var(--neutral-700);
-}
 
 .sidelinks__link__icon svg {
     display: block;

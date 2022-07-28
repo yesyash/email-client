@@ -3,17 +3,17 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+	<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Fluentmail</title>
-	<link rel="stylesheet" href="/src/styles/globals.css">
+	<link rel="stylesheet" href="./src/styles/globals.css">
 </head>
 
 <body>
 	<div id="app">
 		<aside class="sidelinks">
 			<button class="sidelinks__link">
-				<div class="sidelinks__link__icon">
+				<div class="sidelinks__link__icon button">
 					<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
 						stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
 						<polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
@@ -25,7 +25,7 @@
 			</button>
 
 			<button class="sidelinks__link">
-				<div class="sidelinks__link__icon">
+				<div class="sidelinks__link__icon button">
 					<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
 						stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
 						<polyline points="3 6 5 6 21 6"></polyline>
@@ -35,7 +35,7 @@
 			</button>
 
 			<button class="sidelinks__link">
-				<div class="sidelinks__link__icon">
+				<div class="sidelinks__link__icon button">
 					<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
 						stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
 						<line x1="22" y1="2" x2="11" y2="13"></line>
@@ -60,9 +60,9 @@
 
 				<div class="email-container">
 					<div class="email-card">
-						<div class="email-card__img">
-							<!-- <img src=""> -->
-							<div class="email-card__img__alt">
+						<div class="email-card__img userprofile">
+							<!-- <img src="" class="userprofile__img"> -->
+							<div class="email-card__img__alt userprofile__alt">
 								ru
 							</div>
 						</div>
@@ -74,13 +74,632 @@
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, recusandae!
 							</p>
 						</div>
-
 					</div>
 				</div>
 			</div>
+
+			<div class="mailbox">
+
+				<div class="mailbox__options">
+					<div class="mailbox__options__option prev_next">
+						<button class="button">
+							<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+								fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+								<polyline points="15 18 9 12 15 6"></polyline>
+							</svg>
+
+							<span>
+								Previous
+							</span>
+						</button>
+
+						<button class="button">
+							<span>
+								Next
+							</span>
+
+							<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+								fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+								<polyline points="9 18 15 12 9 6"></polyline>
+							</svg>
+						</button>
+					</div>
+
+					<button class="mailbox__options__option button">
+						<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+							fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+							<polyline points="9 14 4 9 9 4"></polyline>
+							<path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
+						</svg>
+
+						<span>Reply</span>
+					</button>
+
+					<button class="mailbox__options__option button">
+						<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+							fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+							<polyline points="15 14 20 9 15 4"></polyline>
+							<path d="M4 20v-7a4 4 0 0 1 4-4h12"></path>
+						</svg>
+
+						<span>Forward</span>
+					</button>
+
+					<button class="mailbox__options__option button">
+						<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+							fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+							<polyline points="3 6 5 6 21 6"></polyline>
+							<path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2">
+							</path>
+						</svg>
+
+						<span>Trash</span>
+					</button>
+				</div>
+
+				<div class="mailbox__subject">
+					<h2 class="mailbox__subject__heading">New login to Spotify</h2>
+					<p class="mailbox__subject__date">Today, 1:35 PM (4 hours ago)</p>
+					<button class="mailbox__subject__favorite button">
+						<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2"
+							fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
+							<polygon
+								points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+							</polygon>
+						</svg>
+					</button>
+				</div>
+
+				<!-- Can be broken into component -->
+				<div class="mailbox__sender">
+					<div class="mailbox__sender__data">
+						<div class="mailbox__sender__data__img userprofile">
+							<!-- <img src="" alt="" class="userprofile__img"> -->
+							<div class="mailbox__sender__data__img__alt userprofile__alt">
+								ru
+							</div>
+						</div>
+
+						<div class="mailbox__sender__data__details">
+							<h3>Spotify</h3>
+							<p>
+								<span>to me</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="mailbox__content">
+					<div class="">
+						<div class="aHl"></div>
+						<div id=":og" tabindex="-1"></div>
+						<div id=":o5" class="ii gt" jslog="20277; u014N:xr6bB; 4:W251bGwsbnVsbCxbXV0.">
+							<div id=":o4" class="a3s aiL msg-5245029884268737966"><u></u>
+								<div marginheight="0" marginwidth="0" style="width:100%!important;margin:0;padding:0">
+									<span style="border:none;padding:0;margin:0;display:none;font-size:1px"></span>
+									<table
+										style="border-collapse:collapse;padding:0;max-width:480px;width:100%;border:0;background-color:#ffffff;margin:0 auto;word-break:break-word"
+										cellpadding="0" cellspacing="0">
+										<tbody style="border:none;padding:0;margin:0">
+											<tr style="border:none;margin:0px;padding:0px">
+												<td style="border:none;padding:0;margin:0">
+													<div id="m_-5245029884268737966main"
+														style="border:none;padding:0;margin:0">
+														<table
+															style="border-collapse:collapse;padding:0;background-color:#ffffff;text-align:left;width:100%;height:50px">
+															<tbody style="border:none;padding:0;margin:0">
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																	<td style="border:none;padding:0;margin:0"><a
+																			href="http://wl.spotify.com/ls/click?upn=XAEfZ2hMeeJ6LbW1-2B0kr4S-2Fu8cbYqXqXzqFraKZunCmSv4pBPaQ05pB0nEOjO4e-2FD3bG_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Br2FMygTp8u6-2FjamZGWu5Vhu2zioLJpJaXbsHoG0PXMcc4xOkR1-2BtYMUHAZhuilXUsjzQaX8wZOD3bVFtqAKbHYxXinJHv3GKXhl1pkM9b7mSBPZZASosQ5a-2FXJjrhRXiiGZK9-2BJuRjmhKy5-2BzEvU7dLFo3YSMziaubP1QBFWyX0bQ1z9bgdccwKY8d86ZQRyPYg5XJ51-2B5Yj1RY9aUQyKKP4Z-2BsFztlKqNmo5ypQLromY7H7qOs9OLyVj07pe2IV4-3D"
+																			style="text-decoration:none;color:#1ed760"
+																			target="_blank"
+																			data-saferedirecturl="https://www.google.com/url?q=http://wl.spotify.com/ls/click?upn%3DXAEfZ2hMeeJ6LbW1-2B0kr4S-2Fu8cbYqXqXzqFraKZunCmSv4pBPaQ05pB0nEOjO4e-2FD3bG_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Br2FMygTp8u6-2FjamZGWu5Vhu2zioLJpJaXbsHoG0PXMcc4xOkR1-2BtYMUHAZhuilXUsjzQaX8wZOD3bVFtqAKbHYxXinJHv3GKXhl1pkM9b7mSBPZZASosQ5a-2FXJjrhRXiiGZK9-2BJuRjmhKy5-2BzEvU7dLFo3YSMziaubP1QBFWyX0bQ1z9bgdccwKY8d86ZQRyPYg5XJ51-2B5Yj1RY9aUQyKKP4Z-2BsFztlKqNmo5ypQLromY7H7qOs9OLyVj07pe2IV4-3D&amp;source=gmail&amp;ust=1659083152425000&amp;usg=AOvVaw0gnZvV_GdHOaop7QyJPPyg"><img
+																				alt=""
+																				style="display:block;max-width:100%;margin-right:auto;width:122px;height:37px"
+																				height="37"
+																				src="https://ci6.googleusercontent.com/proxy/zrOmNVNxpVaBZdTYtwhUu4du871PsVlK_LXDRAWO5BsMMHu1-KWQNB6BV8pCmufeM0Y_Y83sDUfBdKP39ToNx753fhRM35THlsLAqthYuf2hoh06xPh2FofxpuSPCvmAqQ=s0-d-e1-ft#http://message-editor.scdn.co/newsletters/b220713a2d4ac7a75ebe1f9ee0c78549.png"
+																				class="CToWUd" data-bit="iit"></a></td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table
+															style="border-collapse:collapse;padding:0;width:100%;background-color:#ffffff;font-family:helvetica;font-size:48px"
+															dir="auto">
+															<tbody style="border:none;padding:0;margin:0">
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																	<td style="border:none;padding:0;margin:0">
+																		<p
+																			style="border:none;padding:0;margin:0;background-color:#ffffff;color:#000000;font-size:48px;font-weight:400;text-align:left">
+																			<b style="border:none;padding:0;margin:0">New
+																				login to Spotify
+																				<b
+																					style="border:none;padding:0;margin:0"></b></b>
+																		</p>
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table
+															style="border-collapse:collapse;padding:0;width:100%;background-color:#ffffff;font-family:helvetica;font-size:16px"
+															dir="auto">
+															<tbody style="border:none;padding:0;margin:0">
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																	<td style="border:none;padding:0;margin:0">
+																		<p
+																			style="border:none;padding:0;margin:0;background-color:#ffffff;color:#000000;font-size:16px;font-weight:400;text-align:left">
+																			We noticed you logged in from a new device.
+																			If this was you, there’s nothing for you to
+																			do
+																			right now.
+																		</p>
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table
+															style="border-collapse:collapse;padding:0;width:100%;background-color:#ffffff;font-family:helvetica;font-size:16px"
+															dir="auto">
+															<tbody style="border:none;padding:0;margin:0">
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																	<td style="border:none;padding:0;margin:0">
+																		<p
+																			style="border:none;padding:0;margin:0;background-color:#ffffff;color:#000000;font-size:16px;font-weight:400;text-align:left">
+																			Location <b
+																				style="border:none;padding:0;margin:0">India</b>
+																		</p>
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table
+															style="border-collapse:collapse;padding:0;width:100%;background-color:#ffffff;font-family:helvetica;font-size:16px"
+															dir="auto">
+															<tbody style="border:none;padding:0;margin:0">
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																	<td style="border:none;padding:0;margin:0">
+																		<p
+																			style="border:none;padding:0;margin:0;background-color:#ffffff;color:#000000;font-size:16px;font-weight:400;text-align:left">
+																			Time <b
+																				style="border:none;padding:0;margin:0">July
+																				28, 2022 at
+																				1:35:27 PM IST</b></p>
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table
+															style="border-collapse:collapse;padding:0;width:100%;background-color:#ffffff;font-family:helvetica;font-size:24px"
+															dir="auto">
+															<tbody style="border:none;padding:0;margin:0">
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																	<td style="border:none;padding:0;margin:0">
+																		<p
+																			style="border:none;padding:0;margin:0;background-color:#ffffff;color:#000000;font-size:24px;font-weight:400;text-align:left">
+																			<b style="border:none;padding:0;margin:0">Not
+																				you?
+																				<b
+																					style="border:none;padding:0;margin:0"></b></b>
+																		</p>
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table
+															style="border-collapse:collapse;padding:0;width:100%;background-color:#ffffff;font-family:helvetica;font-size:16px"
+															dir="auto">
+															<tbody style="border:none;padding:0;margin:0">
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																	<td style="border:none;padding:0;margin:0">
+																		<p
+																			style="border:none;padding:0;margin:0;background-color:#ffffff;color:#000000;font-size:16px;font-weight:400;text-align:left">
+																			Take a few minutes to secure your account.
+																		</p>
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table
+															style="border-collapse:collapse;padding:0;width:100%;background-color:#ffffff;text-align:left">
+															<tbody style="border:none;padding:0;margin:0">
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																	<td style="border:none;padding:0;margin:0">
+																		<table
+																			style="border-collapse:collapse;padding:0;width:100%">
+																			<tbody
+																				style="border:none;padding:0;margin:0">
+																				<tr
+																					style="border:none;margin:0px;padding:0px">
+																					<td
+																						style="border:none;padding:0;margin:0;font-family:circular,helvetica neue,helvetica,arial,sans-serif;font-weight:700;line-height:1.1em;letter-spacing:0.15px;font-size:14px;text-decoration:none;text-align:center;text-transform:uppercase">
+																						<div
+																							style="border:none;padding:0;margin:0;text-align:left;line-height:0">
+
+																							<a href="http://wl.spotify.com/ls/click?upn=4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svMP-2FPKWPa5yNjbziwlVKnWvHgIjwHXTVlUCSfqRlAYDbg-3D-3D1w9H_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2BoFCiWVdyLz7KQBqQBeN2oyrgCgfA2Hco9KrtwA6fb-2Bmt7smkrJOID3WJ82quCIouToIysSs1Hcw4-2B1UHqZkyl03Bzag7otOCcS6E2MbkbZI64yaBSw42OjBgN22dtIxNdr2SNklA7QyEiQ3eFuqNK67ZTZrF1C8yM5WHfkeFyMe05tgvqoXDRrSNtkmDq7VGYchus3fR4x749nYoVjInSOAQVnM7M4R5YFr0WK3N-2FZKJNJtLygmEttMqZs1ORmjPo-3D"
+																								style="text-decoration:none;color:#ffffff;margin-right:auto;max-width:240px;background-color:#1db954;border-radius:24px;display:block"
+																								target="_blank"
+																								data-saferedirecturl="https://www.google.com/url?q=http://wl.spotify.com/ls/click?upn%3D4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svMP-2FPKWPa5yNjbziwlVKnWvHgIjwHXTVlUCSfqRlAYDbg-3D-3D1w9H_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2BoFCiWVdyLz7KQBqQBeN2oyrgCgfA2Hco9KrtwA6fb-2Bmt7smkrJOID3WJ82quCIouToIysSs1Hcw4-2B1UHqZkyl03Bzag7otOCcS6E2MbkbZI64yaBSw42OjBgN22dtIxNdr2SNklA7QyEiQ3eFuqNK67ZTZrF1C8yM5WHfkeFyMe05tgvqoXDRrSNtkmDq7VGYchus3fR4x749nYoVjInSOAQVnM7M4R5YFr0WK3N-2FZKJNJtLygmEttMqZs1ORmjPo-3D&amp;source=gmail&amp;ust=1659083152426000&amp;usg=AOvVaw1xfYjHImhJJsvRu73rEAUm">
+																								<table
+																									style="border-collapse:collapse;padding:0;width:100%;max-width:240px;height:48px">
+																									<tbody
+																										style="border:none;padding:0;margin:0">
+																										<tr
+																											style="border:none;margin:0px;padding:0px">
+																											<td
+																												style="border:none;padding:0;margin:0;width:24px">
+																											</td>
+																											<td
+																												style="border:none;padding:0;margin:0;font-family:circular,helvetica neue,helvetica,arial,sans-serif;font-weight:700;line-height:1.1em;letter-spacing:0.15px;font-size:14px;text-decoration:none;text-align:center;text-transform:uppercase;color:#ffffff">
+																												SECURE
+																												ACCOUNT
+																											</td>
+																											<td
+																												style="border:none;padding:0;margin:0;width:24px">
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																							</a>
+																						</div>
+																					</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:32px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:32px">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table
+															style="border-collapse:collapse;padding:0;width:100%;background-color:#ffffff;font-family:helvetica;font-size:16px"
+															dir="auto">
+															<tbody style="border:none;padding:0;margin:0">
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																	<td style="border:none;padding:0;margin:0">
+																		<p
+																			style="border:none;padding:0;margin:0;background-color:#ffffff;color:#000000;font-size:16px;font-weight:400;text-align:left">
+																			Make sure this email is from Spotify:
+																			<a href="//support.spotify.com/article/suspicious-email/"
+																				style="text-decoration:none;color:#1ed760"
+																				target="_blank">support.spotify.com/article/<wbr>suspicious-email/</a>
+																		</p>
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:24px">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:24px">
+																	<td colspan="3"
+																		style="border:none;padding:0;margin:0;height:24px">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+														<table
+															style="border-collapse:collapse;padding:0;background-color:#f7f7f7;width:100%"
+															dir="auto">
+															<tbody style="border:none;padding:0;margin:0">
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:25px">
+																	<td colspan="3"
+																		style="border:none;padding:6.25px;margin:0;height:25px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																	<td style="border:none;padding:0;margin:0"><img
+																			height="23"
+																			style="display:block;max-width:100%;height:23px"
+																			src="https://ci5.googleusercontent.com/proxy/krZLumoGu4l_7gE8pygxV84Zi_VPAp0VECy5DsoD3k850aSIo96WTJ9gDtUsn48kCDanL3Z97miV-7z5scHZPy8db0kqhHOm-_NGI2g08eh9jg=s0-d-e1-ft#http://message-editor.scdn.co/newsletter/images/logo_footer.png"
+																			class="CToWUd" data-bit="iit"></td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:25px">
+																	<td colspan="3"
+																		style="border:none;padding:6.25px;margin:0;height:25px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																	<td style="border:none;padding:0;margin:0">
+																		<hr
+																			style="height:1px;background-color:#d1d5d9;border:none;margin:0px;padding:0px">
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:12px">
+																	<td colspan="3"
+																		style="border:none;padding:3px;margin:0;height:12px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;font-family:circular,helvetica neue,helvetica,arial,sans-serif;font-weight:400;line-height:1.65em;letter-spacing:0.15px;font-size:11px;text-decoration:none;color:#88898c">
+																		Get Spotify for: &nbsp;<a
+																			style="text-decoration:none;color:#6d6d6d;display:inline-block;font-weight:700"
+																			href="http://wl.spotify.com/ls/click?upn=4eYBe7grRs48Zqhf9HedJvS69Er-2FFVBoPR6bD9yBuWJ7zx3L84Sz4uVtOTJ9lnoWJ9hFA5sWR6I0pKzLx-2B2-2B2g-3D-3D7Q3x_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Br3FDQrJRLpQ11cW9YR5BdlGgWwSzJzTvS8HLebXTMWTwUrPemEcBsCUpMf55D0v36DzzNq80SmSes-2B4uAF7MC8npN7jbVe7mTwGDj5L42XXdf7yQQKXyQNEUTQsXia0XnMjm-2FfXamzZNy7ykmWQdG12YwvQ1rLA6-2F6kC-2FHBkWpnPSJY7ySY0Ko5R-2Fro-2FI-2Bk6dh7z0DRSUm4vUJ6jxi64ElNeEaEn3ZqhlLmqrC6xqB4Y6FZ-2FWFiIz0Es2GPhCXoBo-3D"
+																			target="_blank"
+																			data-saferedirecturl="https://www.google.com/url?q=http://wl.spotify.com/ls/click?upn%3D4eYBe7grRs48Zqhf9HedJvS69Er-2FFVBoPR6bD9yBuWJ7zx3L84Sz4uVtOTJ9lnoWJ9hFA5sWR6I0pKzLx-2B2-2B2g-3D-3D7Q3x_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Br3FDQrJRLpQ11cW9YR5BdlGgWwSzJzTvS8HLebXTMWTwUrPemEcBsCUpMf55D0v36DzzNq80SmSes-2B4uAF7MC8npN7jbVe7mTwGDj5L42XXdf7yQQKXyQNEUTQsXia0XnMjm-2FfXamzZNy7ykmWQdG12YwvQ1rLA6-2F6kC-2FHBkWpnPSJY7ySY0Ko5R-2Fro-2FI-2Bk6dh7z0DRSUm4vUJ6jxi64ElNeEaEn3ZqhlLmqrC6xqB4Y6FZ-2FWFiIz0Es2GPhCXoBo-3D&amp;source=gmail&amp;ust=1659083152426000&amp;usg=AOvVaw1mx-TNsoXk4Bbf_x2NlUeK">iPhone</a><span
+																			style="border:none;padding:4px 0;margin:0 7px;width:1px;border-left:solid 1px #c3c3c3;border-right:solid 1px transparent">&nbsp;</span><a
+																			style="text-decoration:none;color:#6d6d6d;display:inline-block;font-weight:700"
+																			href="http://wl.spotify.com/ls/click?upn=4eYBe7grRs48Zqhf9HedJvS69Er-2FFVBoPR6bD9yBuWJ7zx3L84Sz4uVtOTJ9lnoWJ9hFA5sWR6I0pKzLx-2B2-2B2g-3D-3DUAPs_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2BqTNh4jjLfLkq0aPEzSQlVCkadeH-2Bs22yuXc5sGVQqXU11Rv4xzwEdVVIulD-2B2nw3hnBCpTwC-2FZJ9WWYvg1wM-2FiWwqdHdWSE9kpQ3-2BRZZ1D3lh5pKvIi6WMXZ43jrJ1vzNGz6ZmEOyIoMSjHPG1dYjjqAL2YtQ97x3vvpu6Yx1pSVQCidinh5ZdBtcx-2B-2B-2BToWCP99ZwmMRULSjQujbdNFU4Nhg34aLi4bYvTD59NqV8PtHGt2YwJUHxhb9C5s3zvqY-3D"
+																			target="_blank"
+																			data-saferedirecturl="https://www.google.com/url?q=http://wl.spotify.com/ls/click?upn%3D4eYBe7grRs48Zqhf9HedJvS69Er-2FFVBoPR6bD9yBuWJ7zx3L84Sz4uVtOTJ9lnoWJ9hFA5sWR6I0pKzLx-2B2-2B2g-3D-3DUAPs_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2BqTNh4jjLfLkq0aPEzSQlVCkadeH-2Bs22yuXc5sGVQqXU11Rv4xzwEdVVIulD-2B2nw3hnBCpTwC-2FZJ9WWYvg1wM-2FiWwqdHdWSE9kpQ3-2BRZZ1D3lh5pKvIi6WMXZ43jrJ1vzNGz6ZmEOyIoMSjHPG1dYjjqAL2YtQ97x3vvpu6Yx1pSVQCidinh5ZdBtcx-2B-2B-2BToWCP99ZwmMRULSjQujbdNFU4Nhg34aLi4bYvTD59NqV8PtHGt2YwJUHxhb9C5s3zvqY-3D&amp;source=gmail&amp;ust=1659083152426000&amp;usg=AOvVaw32gk7jEbMZXkJF4I68VT60">iPad</a><span
+																			style="border:none;padding:4px 0;margin:0 7px;width:1px;border-left:solid 1px #c3c3c3;border-right:solid 1px transparent">&nbsp;</span><a
+																			style="text-decoration:none;color:#6d6d6d;display:inline-block;font-weight:700"
+																			href="http://wl.spotify.com/ls/click?upn=4eYBe7grRs48Zqhf9HedJtMyoFLjd-2FlEYLCmlYVYgFxVQNNN-2BUJklQkK1LshD1Ynga4NYnZpqYs1nV8wpRciylegMH6voQ6INIk-2Fbw1JsZs-3D0wT6_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Bq7hvMIk4HnV2wA-2BL-2B4LPTO5yMGm9UwZgrWVn5NLeyvveFroBkQ0QSxjU9AqcRWnbNLCs5oHlJglQVujKM0gHCtHeAihjoW-2BXcHb7o8NXv-2BpF01uJL7IuNyyW2sa94ukhX7T6FYMHhpPEcRZjDX3RuBEStUosBV71hPfL-2BAmvwpp9C3GEOvOd63u1CjfrD7-2BMvDMBSeSnDahJsUW0T3psBhunOyU98EluJJsvpyPR-2BqwXRldj3Rux7FgwBxSqurdJI-3D"
+																			target="_blank"
+																			data-saferedirecturl="https://www.google.com/url?q=http://wl.spotify.com/ls/click?upn%3D4eYBe7grRs48Zqhf9HedJtMyoFLjd-2FlEYLCmlYVYgFxVQNNN-2BUJklQkK1LshD1Ynga4NYnZpqYs1nV8wpRciylegMH6voQ6INIk-2Fbw1JsZs-3D0wT6_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Bq7hvMIk4HnV2wA-2BL-2B4LPTO5yMGm9UwZgrWVn5NLeyvveFroBkQ0QSxjU9AqcRWnbNLCs5oHlJglQVujKM0gHCtHeAihjoW-2BXcHb7o8NXv-2BpF01uJL7IuNyyW2sa94ukhX7T6FYMHhpPEcRZjDX3RuBEStUosBV71hPfL-2BAmvwpp9C3GEOvOd63u1CjfrD7-2BMvDMBSeSnDahJsUW0T3psBhunOyU98EluJJsvpyPR-2BqwXRldj3Rux7FgwBxSqurdJI-3D&amp;source=gmail&amp;ust=1659083152426000&amp;usg=AOvVaw30xXd4wvArDbr_Ju1ISsJ1">Android</a><span
+																			style="border:none;padding:4px 0;margin:0 7px;width:1px;border-left:solid 1px #c3c3c3;border-right:solid 1px transparent">&nbsp;</span><a
+																			style="text-decoration:none;color:#6d6d6d;display:inline-block;font-weight:700"
+																			href="http://wl.spotify.com/ls/click?upn=4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svN6liBB2De3mzNywEUMwHfnlS0v_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Bo68Q0TmPF0A9n5761p4Re0vxdvA354tI5XKMynJeUPdzN-2FPTFy1ZpfExN28u-2FnrUtg5ltLgiJLaioNrk1SkS4r3zvAxNnEBu7E0uLf6wLATLLpUvM45O6S4PhbAyfLKag5p9KxsT5GsTax6tjvWXqthK6D3-2FdY1hAhKYQnqAt7BMGFWf9ipKogXhkTKgVKaNfEWDmFb2RrvlHNJWToK97SH4NQjNUZIYt6e-2FLKmbqFf2fZQSkERVzQM3v2DqsFApQ-3D"
+																			target="_blank"
+																			data-saferedirecturl="https://www.google.com/url?q=http://wl.spotify.com/ls/click?upn%3D4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svN6liBB2De3mzNywEUMwHfnlS0v_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Bo68Q0TmPF0A9n5761p4Re0vxdvA354tI5XKMynJeUPdzN-2FPTFy1ZpfExN28u-2FnrUtg5ltLgiJLaioNrk1SkS4r3zvAxNnEBu7E0uLf6wLATLLpUvM45O6S4PhbAyfLKag5p9KxsT5GsTax6tjvWXqthK6D3-2FdY1hAhKYQnqAt7BMGFWf9ipKogXhkTKgVKaNfEWDmFb2RrvlHNJWToK97SH4NQjNUZIYt6e-2FLKmbqFf2fZQSkERVzQM3v2DqsFApQ-3D&amp;source=gmail&amp;ust=1659083152426000&amp;usg=AOvVaw29p_Kr0GX2OwWHyaudSMht">Other</a>
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:12px">
+																	<td colspan="3"
+																		style="border:none;padding:3px;margin:0;height:12px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																	<td style="border:none;padding:0;margin:0">
+																		<hr
+																			style="height:1px;background-color:#d1d5d9;border:none;margin:0px;padding:0px">
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:25px">
+																	<td colspan="3"
+																		style="border:none;padding:6.25px;margin:0;height:25px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;font-family:circular,helvetica neue,helvetica,arial,sans-serif;font-weight:400;line-height:1.65em;letter-spacing:0.15px;font-size:11px;text-decoration:none;color:#88898c">
+																		<span
+																			style="border:none;padding:0;margin:0">This
+																			message was sent
+																			to <a href="mailto:yash07779@gmail.com"
+																				target="_blank">yash07779@gmail.com</a>.</span>
+																		If you have
+																		questions or complaints, please <a
+																			href="http://wl.spotify.com/ls/click?upn=4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svPz28De6B4OBdR-2F3HChg9HbY5lqcHGw0DqRdGtdY4DR-2FQ-3D-3DCIn4_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2BpLupfTcHWX4my-2FSxhTxfPsvpi7HZL20rARlz2cCYL0wDcYzJUCIzVzqvHWFO8b2A0Olyvx4aWr8-2BKw6Nnv7nUIsSxZF2u3YqZ66qhN6i5C4Lr1eJbmn27yrLfm3iBYaovqqfhzb7w-2FLLoOVl95jQ9puw5pawiUllBtld2JpFzttMYia9wBwcDgMQEJImARqNylyE3BnwgYZbC6f8g4PjK2oYmsCutzfosJFeXbcSLtdW2c8wRaiKY4TtHSJR5CTCI-3D"
+																			style="text-decoration:none;color:rgb(109,109,109);border:none;margin:0px;padding:0px;font-weight:bold"
+																			target="_blank"
+																			data-saferedirecturl="https://www.google.com/url?q=http://wl.spotify.com/ls/click?upn%3D4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svPz28De6B4OBdR-2F3HChg9HbY5lqcHGw0DqRdGtdY4DR-2FQ-3D-3DCIn4_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2BpLupfTcHWX4my-2FSxhTxfPsvpi7HZL20rARlz2cCYL0wDcYzJUCIzVzqvHWFO8b2A0Olyvx4aWr8-2BKw6Nnv7nUIsSxZF2u3YqZ66qhN6i5C4Lr1eJbmn27yrLfm3iBYaovqqfhzb7w-2FLLoOVl95jQ9puw5pawiUllBtld2JpFzttMYia9wBwcDgMQEJImARqNylyE3BnwgYZbC6f8g4PjK2oYmsCutzfosJFeXbcSLtdW2c8wRaiKY4TtHSJR5CTCI-3D&amp;source=gmail&amp;ust=1659083152426000&amp;usg=AOvVaw3wDqwNIv-fLVEM5Rx0JR6I">contact
+																			us</a>.
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:33px">
+																	<td colspan="3"
+																		style="border:none;padding:8.25px;margin:0;height:33px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;font-family:circular,helvetica neue,helvetica,arial,sans-serif;font-weight:400;line-height:1.65em;letter-spacing:0.15px;font-size:11px;text-decoration:none;color:#88898c">
+																		<a style="text-decoration:none;color:#6d6d6d;display:inline-block;font-weight:700"
+																			href="http://wl.spotify.com/ls/click?upn=4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svN408hRpcuCVCgf7m6J6giwO-2F-2BUTNVMrFhLktjw5Ull5w-3D-3Dzuke_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Bqe7xBcrA-2FqjB3wqLuEIU4JGfwYmvC7ipK4D5Cu-2B7wM1ZqvDCO4DV0eaFjQjp2N9TTp9pxzFCE-2FNvujp8ywHc-2FYFCqPWWq7zenaTO-2BdFdT08UQ1Trt8UIKgg3fVtIUH4V-2B5FlfgtpmXxrB1Cc9viGnL9ZWQEtKfwajxBICNDNWF9bvUXtqBXkwJodORGCE-2BXEfliSE6DkV8mlsxp38TvWPGGneUtwLkwRghBrs-2By4NPtKs2ELwOKzzg6CZHIrAZnyk-3D"
+																			target="_blank"
+																			data-saferedirecturl="https://www.google.com/url?q=http://wl.spotify.com/ls/click?upn%3D4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svN408hRpcuCVCgf7m6J6giwO-2F-2BUTNVMrFhLktjw5Ull5w-3D-3Dzuke_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Bqe7xBcrA-2FqjB3wqLuEIU4JGfwYmvC7ipK4D5Cu-2B7wM1ZqvDCO4DV0eaFjQjp2N9TTp9pxzFCE-2FNvujp8ywHc-2FYFCqPWWq7zenaTO-2BdFdT08UQ1Trt8UIKgg3fVtIUH4V-2B5FlfgtpmXxrB1Cc9viGnL9ZWQEtKfwajxBICNDNWF9bvUXtqBXkwJodORGCE-2BXEfliSE6DkV8mlsxp38TvWPGGneUtwLkwRghBrs-2By4NPtKs2ELwOKzzg6CZHIrAZnyk-3D&amp;source=gmail&amp;ust=1659083152426000&amp;usg=AOvVaw15FjrXiZ_X43E_UgGVjxrB">Terms
+																			of Use</a><span
+																			style="border:none;padding:4px 0;margin:0 7px;width:1px;border-left:solid 1px #c3c3c3;border-right:solid 1px transparent">&nbsp;</span><a
+																			style="text-decoration:none;color:#6d6d6d;display:inline-block;font-weight:700"
+																			href="http://wl.spotify.com/ls/click?upn=4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svMMdiZZlhM5rwjOOro408fav139k-2F2dI6X9HZw2gFoClQ-3D-3Dl_UF_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Bqb5ZJtk2a-2BSMRMMaYwJ5NKn2Up7IPZ0jQBQEbyZeYYUqUqj1kX1ock3HianifeIhjqouBRNbNu6mMAVod-2BgJEYPmAVzvuGnj3k2U8lyrQ6zdWUG4hFBxgadnNOMXF-2BcDDDYd-2FCLVLJXo17Seo-2FX7juru39tyRUlyFgbjCv6keGRsok1K-2FtqV3cEeRRRGP2abIH8ugL36yvrlSlSYBUgHtWlECk5A2KMybgSpmPgG7ZEl2S2dF9-2BKVKPuUXPbqdGUc-3D"
+																			target="_blank"
+																			data-saferedirecturl="https://www.google.com/url?q=http://wl.spotify.com/ls/click?upn%3D4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svMMdiZZlhM5rwjOOro408fav139k-2F2dI6X9HZw2gFoClQ-3D-3Dl_UF_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2Bqb5ZJtk2a-2BSMRMMaYwJ5NKn2Up7IPZ0jQBQEbyZeYYUqUqj1kX1ock3HianifeIhjqouBRNbNu6mMAVod-2BgJEYPmAVzvuGnj3k2U8lyrQ6zdWUG4hFBxgadnNOMXF-2BcDDDYd-2FCLVLJXo17Seo-2FX7juru39tyRUlyFgbjCv6keGRsok1K-2FtqV3cEeRRRGP2abIH8ugL36yvrlSlSYBUgHtWlECk5A2KMybgSpmPgG7ZEl2S2dF9-2BKVKPuUXPbqdGUc-3D&amp;source=gmail&amp;ust=1659083152426000&amp;usg=AOvVaw06kGbv3_3LH9fhmjjQ2oR-">Privacy
+																			Policy</a><span
+																			style="border:none;padding:4px 0;margin:0 7px;width:1px;border-left:solid 1px #c3c3c3;border-right:solid 1px transparent">&nbsp;</span><a
+																			style="text-decoration:none;color:#6d6d6d;display:inline-block;font-weight:700"
+																			href="http://wl.spotify.com/ls/click?upn=4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svPz28De6B4OBdR-2F3HChg9HbY5lqcHGw0DqRdGtdY4DR-2FQ-3D-3DXp9f_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2BqAie5Mryxx6bIrTklsqixvyR4Cv314vLU9AanIlRRI9n3zCWDIfnetwVZQCvu5Wv-2BWPeZuoU8v1zg0NRWycsCn131hKA-2BTNKVU2P27EADvYduo483Sx5a4n9kbTKTuv2LzMvAvpcNbm5-2FAdB4uzsLzKBgKWmmGBuj6JJ5CioDpTO77PIirfpTpruJ4vuUCx-2BWmm0YSj6iZ9UEbdir-2BqtvCuZ5nBP5z-2BIhnkXu1r7SVGrlU0seB-2Bp6vNbbSxIKKLIs-3D"
+																			target="_blank"
+																			data-saferedirecturl="https://www.google.com/url?q=http://wl.spotify.com/ls/click?upn%3D4eYBe7grRs48Zqhf9HedJixaBJLgHzxt7ucpNDx7svPz28De6B4OBdR-2F3HChg9HbY5lqcHGw0DqRdGtdY4DR-2FQ-3D-3DXp9f_lyV-2Bzgy9Pg-2Bk42JIxUNuliJM8ImIcSoHV93WVKGV4kAKihNTmENDUooQ7FbIhknJIydpmPqwnpgc-2BJKyXGS49HKHtaFdNDe4Z6b7FrJQbQ8Gd-2FY9cU-2FX-2BevMSCIXCW5MJx4Zf0W-2BvU7DHaZhphTOPBd5DINvnbH-2Bryv1484Kor48LtfBSA-2Bt-2F4gBUa-2Fii2ofzj6fTA65cGKiMa57NpUzJ50dFX3Tt1Y8eVxcEU0vRA8XabyNh1T6iMhuzdOmmMGKo-2FB9hJOFDbon2bOp21mHe9mQ89OfsXiqSw7aUwrD2X0aX-2B3Gocrc8RK-2F8zWcY3sjmwMQNKVjlJ3bKXaic5KxtslrkXzsoNpbg-2BW74a9HV-2BqAie5Mryxx6bIrTklsqixvyR4Cv314vLU9AanIlRRI9n3zCWDIfnetwVZQCvu5Wv-2BWPeZuoU8v1zg0NRWycsCn131hKA-2BTNKVU2P27EADvYduo483Sx5a4n9kbTKTuv2LzMvAvpcNbm5-2FAdB4uzsLzKBgKWmmGBuj6JJ5CioDpTO77PIirfpTpruJ4vuUCx-2BWmm0YSj6iZ9UEbdir-2BqtvCuZ5nBP5z-2BIhnkXu1r7SVGrlU0seB-2Bp6vNbbSxIKKLIs-3D&amp;source=gmail&amp;ust=1659083152426000&amp;usg=AOvVaw2hqu0a6CwY6K-naRokygdd">Contact
+																			Us</a>
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:12px">
+																	<td colspan="3"
+																		style="border:none;padding:3px;margin:0;height:12px">
+																	</td>
+																</tr>
+																<tr style="border:none;margin:0px;padding:0px">
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																	<td
+																		style="border:none;padding:0;margin:0;font-family:circular,helvetica neue,helvetica,arial,sans-serif;font-weight:400;line-height:1.65em;letter-spacing:0.15px;font-size:11px;text-decoration:none;color:#88898c">
+																		Spotify AB, Regeringsgatan 19, 111 53,
+																		Stockholm,
+																		Sweden</td>
+																	<td
+																		style="border:none;padding:0;margin:0;width:6.25%">
+																	</td>
+																</tr>
+																<tr
+																	style="border:none;margin:0px;padding:0px;height:25px">
+																	<td colspan="3"
+																		style="border:none;padding:6.25px;margin:0;height:25px">
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<img src="https://ci4.googleusercontent.com/proxy/NI9j-RZUy8tyL3fbSxnmm6YGAS6JOygsWo28A2cfgpqrur-TUtjOUznmmObIPiGDaHcLH9KPM5H2eIv1dljx9qXTRksQIN7BuCCVkGRp1DDaYGU4FWdvE6OkB2HhD-jIdJKGL1IWxFhs_Q70_uOp7J_cNJkaraKky5dFh8iqoEMFprhMAHvhE_HhYGAGDvhbg4CBQBrnNi-xdlnTXDjZNd7V5m2Vu1CFEVBVMiW3omevoGrTPJTNfnZoMOmOSRo2oP4XvGrQI3Zy--V_9rWwl6B2iJ2yKjE6eN0b3Lgsq8___4iMFAotuAa7wnOaUVdIWNGw2ilRv8-MrqbdrnK79rE5i5MBRvZi5vZKRci03EZD30yp259Ax9pW1l32BhX7VUxKVeBzybzqlULBQf5mimUnobE8wNoCpxiY-FJ5p-wXgb6pcBdAylaATYMRyx8sYwE0xMB0rdSYCbZM9Rp6ldDNiVFxT4ZGCAki0H2OWIL46Z0443Y7VvisWHNj3o2JVCQrOlqJeUSxNBpqxdvyBwGo4T3oqZLp5-CrqIXs_2LzmKM4nDJ2A8f9lk7ve2qG2u4d3nLK-2-DpwK7TeIwYeDhKlpLzoEa5DRJDhsONHUTkdmQ6_P6sdLRESqqNmOVoCVw5hDI0ptMtZ1Pk9xU_4CecBb2RL_y7Flbs5bwSHcpP8NwTuuncQyi9pu15yqidwNqKRi_jw_pdzRb97DWhVhOkJIQoPy_NrRZgbjCkIajyAchPjchJtS4xe8ylHjsM1hTzBSSygcrltnfwnpVefCqppdx8_vemZ-lRNFKx9S2rebecMFWPglNoMjnfi9KLnQG_8KffEfeVCr9Y3ev3Vy2bWPGcNXRsxvE2D3qhJqWtyjBQ9Iqif_dRUR01G4XZrONmOYWowNjYPl3qjFA_JvGDCo-zhwLmCiFTZTW2gLzp3-Y=s0-d-e1-ft#http://wl.spotify.com/wf/open?upn=wIvn0F0XNxL0oQOj0vFbWnKrRkrXliPb2BIXARhf1Aoai6pLtkPE1ZmBNnx3s-2BS-2Bc6ctRId1uzAAfS-2FzOs6BNakuyo7SEIWNHslFfX7DvPgq-2BuuY8eKw1RhDznwF2cFKlEtxJNNiBmVcDLs0dZFuSEhr8wZXdQKIJKDJoyTFnueQGZawXlpdkBUnG8v7XC-2BJ5R76bZKabzouwcYZ7a3cs5PYzwnAHJPPGoW3-2FoOlcaIbN5elSpL5eF8TFEQTMsiErIukt51UBYyIuBTYRmR1Llf-2F1w7MRdB2Em7evntzem2jzJVFvwuy-2FNeVaVNVmW00ka5iwWTHsyBdXIVZGpWxS-2BivTdmRHQPOJ3xZ0wy9gShaJD4w7-2B6uld7Vq1jcqQsKAF-2Fkk7IHTnP4gtID2f8TTCXYQqXXPJ2AoDQPiECBTM20tkvBtYjFznzJMP-2FSG02Lbe18d2BztoLJQDAitKiHdrTJGnW2cZ89xZOXTxxoREpD9noH-2BmIVT2Poi4zmzSaOHLE4lB-2BA-2BoFy8RdF-2FxuFAKKG5hSNkzehTI3heYdmwtINNp05V7HsTX57BYrzKu6e6sPYOysx5pKOjGwWoi7Unfnh8pk5N1AC7nnPVhxeEMk-3D"
+										alt="" width="1" height="1" border="0"
+										style="height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important"
+										class="CToWUd" data-bit="iit" jslog="138226; u014N:xr6bB; 53:W2ZhbHNlLDJd">
+								</div>
+							</div>
+							<div class="yj6qo"></div>
+							<div class="yj6qo"></div>
+						</div>
+						<div id=":ok" class="ii gt" style="display:none">
+							<div id=":ol" class="a3s aiL "></div>
+						</div>
+						<div class="hi"></div>
+					</div>
+				</div>
+
+
+			</div>
 		</main>
 	</div>
-	<script type="module" src="/src/main.ts"></script>
+	<script type="module" src="./src/main.ts"></script>
 </body>
 
 </html>
